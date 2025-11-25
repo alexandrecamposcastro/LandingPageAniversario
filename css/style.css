@@ -40,6 +40,10 @@ body {
     padding: 0 20px;
 }
 
+.rsvp {
+    scroll-margin-top : 80px;
+}
+
 .hero {
     min-height: 100vh;
     display: flex;
@@ -588,3 +592,4 @@ body {
         grid-template-columns: 1fr;
     }
 }
+

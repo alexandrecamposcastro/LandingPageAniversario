@@ -20,14 +20,18 @@ function updateCountdown() {
 }
 
 function scrollToSection(sectionId) {
-    document.getElementById(sectionId).scrollIntoView({
-        behavior: 'smooth'
-    });
+    const element = document.getElementById(sectionId);
+    if (element) {
+        element.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
 }
 
 function openMap() {
-    const address = "Rua das Flores, 123";
-    const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+    const address = "Rua do Chumbo, 11";
+    const mapsUrl = `https://maps.app.goo.gl/D8ztMdz7adCWRfoi6`;
     window.open(mapsUrl, '_blank');
 }
 

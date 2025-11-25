@@ -11,9 +11,7 @@
 
 ## Demonstração
 
-![Screenshot](https://via.placeholder.com/800x400/0a0a0a/00ff41?text=CyberBirthday+2026)
-
-> 🔗 **Acesse:** [https://seuusuario.github.io/aniversario-cyberpunk](https://seuusuario.github.io/aniversario-cyberpunk)
+> 🔗 **Acesse:** [https://landing-page-aniversario-ashy.vercel.app](https://landing-page-aniversario-ashy.vercel.app)
 
 ## Funcionalidades
 

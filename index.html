@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniversário - 19/01/2026</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="matrix"></div>
+    
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="terminal-header">
+                    <div class="prompt">user@aniversario:~$</div>
+                    <div class="command">./start_celebration.sh</div>
+                </div>
+                <h1 class="hero-title">
+                    <span class="glitch" data-text="VOCÊ ESTÁ CONVIDADO">VOCÊ ESTÁ CONVIDADO</span>
+                </h1>
+                <p class="hero-subtitle">> Sistema de celebração inicializado</p>
+                
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="days">00</span>
+                        <span class="countdown-label">DIAS</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="hours">00</span>
+                        <span class="countdown-label">HORAS</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="minutes">00</span>
+                        <span class="countdown-label">MINUTOS</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="seconds">00</span>
+                        <span class="countdown-label">SEGUNDOS</span>
+                    </div>
+                </div>
+                
+                <button class="cta-button" onclick="scrollToSection('details')">
+                    <span class="button-text">CONFIRMAR PRESENÇA</span>
+                    <span class="blink">_</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="details" class="details">
+        <div class="container">
+            <h2 class="section-title">DETALHES DO EVENTO</h2>
+            <div class="details-grid">
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>DATA</h3>
+                    <p>19 de Janeiro de 2026</p>
+                    <p class="detail-note">DOMINGO</p>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>HORÁRIO</h3>
+                    <p>19:00 às 23:00</p>
+                    <p class="detail-note">Chegada a partir das 18:30</p>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>LOCAL</h3>
+                    <p>Minha Casa</p>
+                    <p class="detail-note">Rua do Chumbo, 11</p>
+                    <button class="map-button" onclick="openMap()">
+                        <i class="fas fa-directions"></i>
+                        VER NO MAPA
+                    </button>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>PRESENTES</h3>
+                    <p>Sua presença é o melhor presente!</p>
+                    <p class="detail-note">Mas pode me dar uma rtx 6090</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="program">
+        <div class="container">
+            <h2 class="section-title">PROGRAMAÇÃO</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-time">19:00</div>
+                    <div class="timeline-content">
+                        <h3>CHEGADA DOS CONVIDADOS</h3>
+                        <p>Recepção com bebida</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">20:00</div>
+                    <div class="timeline-content">
+                        <h3>BRINDE E PARABÉNS</h3>
+                        <p>Momento do bolo</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">21:00</div>
+                    <div class="timeline-content">
+                        <h3>FESTA</h3>
+                        <p>Música e bebida</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">23:00</div>
+                    <div class="timeline-content">
+                        <h3>ENCERRAMENTO</h3>
+                        <p>Despedida</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rsvp">
+        <div class="container">
+            <h2 class="section-title">CONFIRMAR PRESENÇA</h2>
+            <form class="rsvp-form" id="rsvpForm">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder=" " required>
+                    <label for="name">SEU NOME COMPLETO</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder=" " required>
+                    <label for="email">SEU E-MAIL</label>
+                </div>
+                <div class="form-group">
+                    <select id="guests" name="guests" required>
+                        <option value="" disabled selected> </option>
+                        <option value="1">VOU SOZINHO(A)</option>
+                        <option value="2">EU + 1 ACOMPANHANTE</option>
+                        <option value="3">EU + 2 ACOMPANHANTES</option>
+                    </select>
+                    <label for="guests">NÚMERO DE PESSOAS</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="4" placeholder=" "></textarea>
+                    <label for="message">MENSAGEM ESPECIAL (OPCIONAL)</label>
+                </div>
+                <button type="submit" class="submit-button">
+                    <i class="fas fa-paper-plane"></i>
+                    CONFIRMAR PRESENÇA
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>ESPERO VOCÊ LÁ!</h3>
+                    <p>Vai ser incrível comemorar com todos</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Meu Aniversário</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
